@@ -1,0 +1,43 @@
+version: '3'
+
+volumes:
+  result:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./volume/result
+  log:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./volume/log
+  apache:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./volume/apache
+
+services:
+  vas:
+    build:
+    image: hieucien/vas:proto1.0
+    container_name: vas
+    hostname: vas
+    restart: always
+    ports:
+      - '4173:4173'
+      - '4174:4174'
+      - '4175:4175'
+    command:
+      [
+        /bin/bash,
+        -c,
+        '/usr/sbin/apache2ctl start && cd /var/www/html/evolution && flask --app app.py --debug run --host=0.0.0.0 --port=4174',
+      ]
+    volumes:
+      - result:/var/www/html/evolution/public/result
+      - log:/var/www/html/evolution/public/log
+      - apache:/var/log/apache2
