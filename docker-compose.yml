@@ -22,7 +22,6 @@ volumes:
 
 services:
   vas:
-    build:
     image: hieucien/vas:proto1.0
     container_name: vas
     hostname: vas
