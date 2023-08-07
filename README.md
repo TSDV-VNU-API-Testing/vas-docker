@@ -2,8 +2,8 @@
 
 **NOTE**:
 
-- Services run on 3 port `4173`, `4174`, `4175`
-- `4173` for client, `4174` for server and `4175` for documentation website
+- Services run on 2 port `4173`, `4175`
+- `4173` for client and server (server use `/api`) and `4175` for documentation website
 - File `volume/log/run.log` contains all log of server
 - Folder `volume/result` contains results of test execution.
 - Folder `volume/apache` contains Apache Web Server log.

@@ -21,14 +21,14 @@ volumes:
       device: volume/apache
 
 services:
-  vas:
+  vas-2-port:
     image: hieucien/vas:proto1.1
-    container_name: vas
-    hostname: vas
+    container_name: vas-2-port
+    hostname: vas-2-port
     restart: always
     ports:
       - '4173:4173'
-      - '4174:4174'
+      # - '4174:4174'
       - '4175:4175'
     volumes:
       - result:/var/www/evolution/public/result
