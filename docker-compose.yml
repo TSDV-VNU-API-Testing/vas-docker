@@ -28,6 +28,7 @@ services:
     restart: always
     ports:
       - '4173:4173'
+      - '4174:4174'
       - '4175:4175'
     volumes:
       - result:/var/www/evolution/public/result
