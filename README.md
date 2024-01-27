@@ -11,8 +11,12 @@
 
 ## Installation
 
+- **REQUIRED: Enable permission for `volume` folder**:
+
 ```bash
-cd vas-docker/
-sudo chmod -R 777 volume
+chmod 777 -R ./volume
+```
+
+```bash
 docker compose up
 ```

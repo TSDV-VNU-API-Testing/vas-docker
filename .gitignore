@@ -1,8 +1,2 @@
-volume/log/*
-!volume/log/temp.log
-volume/result/*
-!volume/result/temp.txt
-volume/apache/*.log
-!volume/apache/temp.log
-README_BACKUP.md
-run.docker.sh
+**/*.log
+volume/result/*/
