@@ -1,4 +1,4 @@
-# Vas - Validator for Schemathesis
+# VaS
 
 **NOTE**:
 
