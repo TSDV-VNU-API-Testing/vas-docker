@@ -1,2 +1,5 @@
 **/*.log
 volume/result/*/
+volume/upload/*.json
+volume/upload/*.yaml
+volume/upload/*.yml

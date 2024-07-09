@@ -5,6 +5,12 @@ volumes:
       o: bind
       type: none
       device: volume/result
+  upload:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: volume/upload
   log:
     driver: local
     driver_opts:
@@ -19,10 +25,10 @@ volumes:
       device: volume/apache
 
 services:
-  vas-1.0.6:
-    image: hieucien/vas:1.0.6
-    container_name: vas-1.0.6
-    hostname: vas-1.0.6
+  vas-1.0.7:
+    image: hieucien/vas:1.0.7
+    container_name: vas-1.0.7
+    hostname: vas-1.0.7
     restart: always
     ports:
       - '4173:4173'
@@ -30,5 +36,6 @@ services:
       - '4175:4175'
     volumes:
       - result:/var/www/server/public/result
+      - upload:/var/www/server/public/upload
       - log:/var/www/server/public/log
       - apache:/var/log/apache2
