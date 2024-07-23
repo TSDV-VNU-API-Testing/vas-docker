@@ -20,6 +20,8 @@
 chmod 777 -R ./volume
 ```
 
+- To start
+
 ```bash
 docker compose up
 ```

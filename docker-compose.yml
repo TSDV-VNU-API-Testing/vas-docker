@@ -25,10 +25,10 @@ volumes:
       device: volume/apache
 
 services:
-  vas-1.0.7:
-    image: hieucien/vas:1.0.7
-    container_name: vas-1.0.7
-    hostname: vas-1.0.7
+  vas-1.0.8:
+    image: hieucien/vas:1.0.8
+    container_name: vas-1.0.8
+    hostname: vas-1.0.8
     restart: always
     ports:
       - '4173:4173'
